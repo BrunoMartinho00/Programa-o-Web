@@ -6,6 +6,10 @@
   font-weight: lighter;
 }
 
+body {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
 header {
   background-color: black;
   align-items: center;
@@ -31,13 +35,14 @@ main {
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  padding: 50px;
 }
 
 .buttons {
-    display:flex;
-    align-items: center;
-    align-content: center;
-    flex-flow: wrap;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-flow: column;
 }
 
 a.button {
@@ -45,18 +50,28 @@ a.button {
   align-items: center;
   justify-content: center;
   appearance: button;
-  background-image: linear-gradient(
-    0deg,
-    #0D3E66,
-    #125185,
-    #0D3E66
-  );
   text-decoration: none;
-  color: aliceblue;
-  height: 100px;
-  width: 100px;
-  font-size: x-large;
-  font-weight: bold;
-  border-radius: 7px;
-  margin: 50px;
+  color: rgb(106, 106, 106);
+  border: 1px solid rgb(148, 148, 148);
+  height: 45px;
+  width: 100vw;
+  max-width: 700px;
+  font-size: large;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+a.button:hover{
+  background-color: rgb(240, 240, 240);
+}
+
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  justify-content: end;
+  padding: 0px 10px;
+  color: gray;
+  background: white;
 }
