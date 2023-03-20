@@ -62,6 +62,8 @@ a.button {
 }
 
 a.button:hover{
+  animation-name: hoverButton;
+  animation-duration: 0.5s;
   background-color: rgb(240, 240, 240);
 }
 
@@ -74,4 +76,9 @@ footer {
   padding: 0px 10px;
   color: gray;
   background: white;
+}
+
+@keyframes hoverButton {
+  from {background-color: white ;}
+  to {background-color: rgb(240, 240, 240);}
 }

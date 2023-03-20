@@ -73,6 +73,8 @@ div.image > p {
   text-shadow: 2px 2px 5px black;
 }
 
+
+
 div.image {
   position: relative;
   grid-area: image;
