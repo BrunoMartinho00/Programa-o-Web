@@ -78,6 +78,14 @@ footer {
   background: white;
 }
 
+.footerLinks:hover,
+.footerLinks:active,
+.footerLinks:visited,
+.footerLinks:link {
+  color: gray;
+  text-decoration: none;
+}
+
 @keyframes hoverButton {
   from {background-color: white ;}
   to {background-color: rgb(240, 240, 240);}

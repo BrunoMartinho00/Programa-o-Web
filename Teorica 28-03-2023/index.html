@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorica</title>
+
+    <script>
+        function detetar_texto() {
+            document.querySelector('input[type="submit"]').disabled = false
+        }
+
+        function inserir_tarefa() {
+            const ul = document.querySelector('ul')
+
+
+            const tarefa = document.querySelector('#tarefa')
+            console.log(tarefa.value)
+
+            if (tarefa.value != '') {
+                const li = document.createElement('li')
+                li.innerHTML = tarefa.value
+                ul.append(li)
+            }
+
+            tarefa.value = ''
+
+            document.querySelector('input[type="submit"]').disabled = true
+            return false
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('form').onsubmit = inserir_tarefa
+            document.querySelector('#tarefa').onkeyup = detetar_texto
+
+            document.querySelector('input[type="submit"]').disabled = true
+        })
+    </script>
+</head>
+
+<body>
+    <h1 id="tarefaTitle">TAREFA</h1>
+
+    <ul></ul>
+
+    <form>
+        <input type="text" id="tarefa">
+        <input type="submit" value="guardar">
+    </form>
+</body>
+
+</html>
